@@ -30,7 +30,7 @@ http {
 
         location / {
                 proxy_pass_request_headers on;
-                proxy_pass http://172.17.0.2:81/;
+                proxy_pass http://172.17.0.2:81/; # the ip of the container containing the website
                 proxy_set_header CF-Connecting-IP 66.66.66.66;
                 proxy_set_header X-Forwarded-For "there you go";
         }
